@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KALDOPUS - KALIBRASI POMPA DOSING PULSAFEEDER</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-3 text-center">
+      <h1>KALIBRASI POMPA DOSING PULSAFEEDER</h1>
+      <div class="d-flex justify-content-center">
+        <div class="card mt-3 shadow" style="width: 50%">
+          <div class="card-body">
+            <div class="mb-3 text-start">
+              <label for="konsentrasipac" class="form-label"
+                >Konsentrasi PAC</label
+              >
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control shadow"
+                  id="konsentrasipac"
+                />
+                <span class="input-group-text">%</span>
+              </div>
+            </div>
+            <div class="mb-3 text-start">
+              <label for="stroke" class="form-label">Stroke</label>
+              <div class="input-group">
+                <input type="number" class="form-control shadow" id="stroke" />
+                <span class="input-group-text">%</span>
+              </div>
+            </div>
+            <div class="mb-3 text-start">
+              <label for="volume" class="form-label">Volume</label>
+              <div class="input-group">
+                <input type="number" class="form-control shadow" id="volume" />
+                <span class="input-group-text">ml</span>
+              </div>
+            </div>
+            <div class="mb-3 text-start">
+              <label for="waktu" class="form-label">Waktu</label>
+              <div class="input-group">
+                <input type="number" class="form-control shadow" id="waktu" />
+                <span class="input-group-text">sekon</span>
+              </div>
+            </div>
+            <div class="mb-3 text-start">
+              <label for="debitipa" class="form-label">Debit IPA</label>
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control shadow"
+                  id="debitipa"
+                />
+                <span class="input-group-text">lps</span>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary shadow"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              id="hitung"
+              onclick="hitung()"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="mt-3">
+        <a href="https://bludamcimahi.com" style="text-decoration-color: #00f2ff; color: black;">Urusan Produksi</a> &copy; 2024 | Powered by
+        <a href="https://heyanugrah.com" style="text-decoration-color: #00f2ff; color: black;">H▲A</a></p>
+      </p>
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Hasil Kalibrasi
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-bordered text-center">
+                <tr class="table-info">
+                  <td class="fw-bold">Stroke</td>
+                  <td class="fw-bold">Waktu</td>
+                  <td class="fw-bold">Volume</td>
+                </tr>
+                <tr>
+                  <td><span id="getstroke"></span></td>
+                  <td><span id="getwaktu"></span></td>
+                  <td><span id="getvolume"></span></td>
+                </tr>
+                <tr class="table-info">
+                  <td colspan="3" class="fw-bold">Persamaan</td>
+                </tr>
+                <tr>
+                  <td>1 %</td>
+                  <td>1 detik</td>
+                  <td><span id="getqmaxdetik"></span></td>
+                </tr>
+                <tr>
+                  <td>100 %</td>
+                  <td>1 jam</td>
+                  <td><span id="qmax"></span></td>
+                </tr>
+              </table>
+
+              <hr />
+              <h5>Table Stroke dan Dosis Koagulan</h5>
+
+              <table class="table table-bordered" id="tableDosis">
+                <thead>
+                  <tr>
+                    <th>Stroke</th>
+                    <th>Dosis</th>
+                  </tr>
+                </thead>
+                <tbody id="dosisRange"></tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
