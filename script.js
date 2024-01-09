@@ -9,22 +9,29 @@ function hitung() {
 
   //hitung qmax
   let qmaxdetik = (volume / waktu) * (stroke / 100);
+  // let qmaxdetik = volume / stroke / 100 / waktu;
   let qmax = (100 / stroke) * qmaxdetik * 3.6;
+  let qmldetik = qmax / 3.6;
+  let qmaxdetik2 = qmldetik * (1 / 100);
+
+  console.log(qmaxdetik);
 
   //hitung dosis
-  let dosis = ((konsentrasi * 10000) / (debitIPA * 1000)) * qmaxdetik;
+  let dosering = volume / waktu;
+  // let dosis = ((konsentrasi * 10000) / (debitIPA * 1000)) * qmaxdetik;
+  let dosis = (qmaxdetik2 * konsentrasi * 10000) / debitIPA;
 
   // show hasil hitung
-  document.getElementById("qmax").innerHTML = qmax + " lph";
+  document.getElementById("qmax").innerHTML = qmax + " l";
   document.getElementById("getstroke").innerHTML = stroke + " %";
   document.getElementById("getwaktu").innerHTML = waktu + " detik";
   document.getElementById("getvolume").innerHTML = volume + " ml";
-  document.getElementById("getqmaxdetik").innerHTML = qmaxdetik + " mlps";
+  document.getElementById("getqmaxdetik").innerHTML = qmaxdetik2 + " ml";
+  document.getElementById("getqmldetik").innerHTML = qmldetik + " ml";
 
   let strokePompa = [];
   for (s = 0; s <= 100; s += 1) {
     strokePompa.push(s);
-    console.log(s[strokePompa]);
   }
 
   let text = "";
@@ -33,7 +40,7 @@ function hitung() {
       "<tr><td>" +
       strokePompa[i] +
       " %</td><td>" +
-      ((strokePompa[i] / 100) * dosis).toFixed(2) +
+      ((dosis * strokePompa[i]) / 100).toFixed(2) +
       " mg/l</td></tr>";
   }
 
