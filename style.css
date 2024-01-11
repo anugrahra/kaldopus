@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Tourney&display=swap");
+@media only screen and (max-width: 768px) {
+  .hilang {
+    display: none;
+  }
+}
