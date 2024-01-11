@@ -77,8 +77,9 @@ function hitung() {
           (strokePompa2[j] - stroke1)
       ).toFixed(2) +
       " ml/s</td><td>" +
+      // (0 + ((dosering1 - 0) / (stroke1 - 0)) * (strokePompa1[i] - 0)
       (
-        ((stroke1 +
+        ((dosering1 +
           ((dosering2 - dosering1) / (stroke2 - stroke1)) *
             (strokePompa2[j] - stroke1)) *
           (konsentrasipac * 10000)) /
@@ -109,7 +110,7 @@ function hitung() {
       ).toFixed(2) +
       " ml/s</td><td>" +
       (
-        ((stroke2 +
+        ((dosering2 +
           ((dosering3 - dosering2) / (stroke3 - stroke2)) *
             (strokePompa3[k] - stroke2)) *
           (konsentrasipac * 10000)) /
@@ -140,7 +141,7 @@ function hitung() {
       ).toFixed(2) +
       " ml/s</td><td>" +
       (
-        ((stroke3 +
+        ((dosering3 +
           ((dosering4 - dosering3) / (stroke4 - stroke3)) *
             (strokePompa4[l] - stroke3)) *
           (konsentrasipac * 10000)) /
@@ -171,7 +172,7 @@ function hitung() {
       ).toFixed(2) +
       " ml/s</td><td>" +
       (
-        ((stroke4 +
+        ((dosering4 +
           ((dosering5 - dosering4) / (stroke5 - stroke4)) *
             (strokePompa4[m] - stroke4)) *
           (konsentrasipac * 10000)) /
