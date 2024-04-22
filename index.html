@@ -10,8 +10,8 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
     <div class="container mt-3 text-center">
@@ -52,10 +52,10 @@
                       class="form-control shadow"
                       id="debitipa"
                       value="60"
+                      required
                     />
                     <span class="input-group-text shadow">lps</span>
                   </div>
-                  <div class="form-text">Ganti value ini, jika debit pengolahan berubah.</div>
                 </div>
               </div>
             </div>
@@ -66,12 +66,6 @@
           </div>
         </div>
         <!-- general card -->
-        <!-- kalibrasi terakhir -->
-        <div class="row">
-          <div class="col">
-            <p><b>Kalibrasi Terakhir :</b> 18 Maret 2024</p>
-          </div>
-        </div>
         <!-- card sample -->
         <div class="row row-cols-1 row-cols-md-5 g-4">
           <div class="col">
@@ -85,7 +79,7 @@
                       type="number"
                       class="form-control shadow"
                       id="stroke1"
-                      value="10"
+                      value=""
                     />
                     <span class="input-group-text shadow">%</span>
                   </div>
@@ -97,7 +91,7 @@
                       type="number"
                       class="form-control shadow"
                       id="volume1"
-                      value="100"
+                      value=""
                     />
                     <span class="input-group-text shadow">ml</span>
                   </div>
@@ -109,7 +103,7 @@
                       type="number"
                       class="form-control shadow"
                       id="waktu1"
-                      value="55"
+                      value=""
                     />
                     <span class="input-group-text shadow">sekon</span>
                   </div>
@@ -128,7 +122,7 @@
                       type="number"
                       class="form-control shadow"
                       id="stroke2"
-                      value="20"
+                      value=""
                     />
                     <span class="input-group-text shadow">%</span>
                   </div>
@@ -140,7 +134,7 @@
                       type="number"
                       class="form-control shadow"
                       id="volume2"
-                      value="430"
+                      value=""
                     />
                     <span class="input-group-text shadow">ml</span>
                   </div>
@@ -152,136 +146,7 @@
                       type="number"
                       class="form-control shadow"
                       id="waktu2"
-                      value="30"
-                    />
-                    <span class="input-group-text shadow">sekon</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Sample 3</h5>
-                <div class="mb-3 text-start">
-                  <label for="stroke3" class="form-label">Stroke</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control shadow"
-                      id="stroke3"
-                      value="25"
-                    />
-                    <span class="input-group-text shadow">%</span>
-                  </div>
-                </div>
-                <div class="mb-3 text-start">
-                  <label for="volume3" class="form-label">Volume</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control shadow"
-                      id="volume3"
-                      value="720"
-                    />
-                    <span class="input-group-text shadow">ml</span>
-                  </div>
-                </div>
-                <div class="mb-3 text-start">
-                  <label for="waktu3" class="form-label">Waktu</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control shadow"
-                      id="waktu3"
-                      value="30"
-                    />
-                    <span class="input-group-text shadow">sekon</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Sample 4</h5>
-                <div class="mb-3 text-start">
-                  <label for="stroke4" class="form-label">Stroke</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control shadow"
-                      id="stroke4"
-                      value="30"
-                    />
-                    <span class="input-group-text shadow">%</span>
-                  </div>
-                </div>
-                <div class="mb-3 text-start">
-                  <label for="volume4" class="form-label">Volume</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control shadow"
-                      id="volume4"
-                      value="780"
-                    />
-                    <span class="input-group-text shadow">ml</span>
-                  </div>
-                </div>
-                <div class="mb-3 text-start">
-                  <label for="waktu4" class="form-label">Waktu</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control shadow"
-                      id="waktu4"
-                      value="30"
-                    />
-                    <span class="input-group-text shadow">sekon</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Sample 5</h5>
-                <div class="mb-3 text-start">
-                  <label for="stroke5" class="form-label">Stroke</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control shadow"
-                      id="stroke5"
-                      value="40"
-                    />
-                    <span class="input-group-text shadow">%</span>
-                  </div>
-                </div>
-                <div class="mb-3 text-start">
-                  <label for="volume5" class="form-label">Volume</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control shadow"
-                      id="volume5"
-                      value="370"
-                    />
-                    <span class="input-group-text shadow">ml</span>
-                  </div>
-                </div>
-                <div class="mb-3 text-start">
-                  <label for="waktu5" class="form-label">Waktu</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control shadow"
-                      id="waktu5"
-                      value="10"
+                      value=""
                     />
                     <span class="input-group-text shadow">sekon</span>
                   </div>
@@ -348,33 +213,7 @@
                 </tr>
                 <tbody id="dosisRange2"></tbody>
               </table>
-              <table class="table table-bordered text-center table-hover col">
-                <tr class="table-info">
-                  <td class="fw-bold">Stroke</td>
-                  <td class="fw-bold">Dosering</td>
-                  <td class="fw-bold">Dosis</td>
-                </tr>
-                <tbody id="dosisRange3"></tbody>
-              </table>
               </div>
-              <div class="row d-flex justify-content-between">
-              <table class="table table-bordered text-center table-hover col me-2">
-                <tr class="table-primary">
-                  <td class="fw-bold">Stroke</td>
-                  <td class="fw-bold">Dosering</td>
-                  <td class="fw-bold">Dosis</td>
-                </tr>
-                <tbody id="dosisRange4"></tbody>
-              </table>
-              <table class="table table-bordered text-center table-hover col ms-2">
-                <tr class="table-info">
-                  <td class="fw-bold">Stroke</td>
-                  <td class="fw-bold">Dosering</td>
-                  <td class="fw-bold">Dosis</td>
-                </tr>
-                <tbody id="dosisRange5"></tbody>
-              </table>
-            </div>
             </div>
             <div class="modal-footer">
               <button
