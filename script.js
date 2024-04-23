@@ -32,7 +32,7 @@ function hitung() {
       (0 + ((dosering1 - 0) / (stroke1 - 0)) * (strokePompa1[i] - 0)).toFixed(
         2
       ) +
-      " ml/s</td><td>" +
+      " ml/s</td><td class='table-warning'>" +
       (
         ((0 + ((dosering1 - 0) / (stroke1 - 0)) * (strokePompa1[i] - 0)) *
           (konsentrasipac * 10000)) /
@@ -61,7 +61,7 @@ function hitung() {
         ((dosering2 - dosering1) / (stroke2 - stroke1)) *
           (strokePompa2[j] - stroke1)
       ).toFixed(2) +
-      " ml/s</td><td>" +
+      " ml/s</td><td class='table-warning'>" +
       // (0 + ((dosering1 - 0) / (stroke1 - 0)) * (strokePompa1[i] - 0)
       (
         ((dosering1 +
