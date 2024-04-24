@@ -159,3 +159,18 @@ function hitung2() {
   let dosisRange4 = document.getElementById("dosisRange4");
   dosisRange4.innerHTML = text4;
 }
+
+const popup = new Popup({
+  id: "disclaimer",
+  title: "Perhatian",
+  content:
+    "Ingat untuk selalu melihat Tabel Kalibrasi untuk menentukan nilai-nilai yang akan di-input.<br><br>Kalibrasi dilakukan minimal 1 (satu) minggu sekali.<br><br>Selalu menyala abangkuh 🔥🔥🔥",
+  sideMargin: "2.9vw",
+  titleColor: "#fff",
+  textColor: "#fff",
+  backgroundColor: "#222",
+  closeColor: "#fff",
+  fontSizeMultiplier: 1.2,
+  linkColor: "#888",
+  showImmediately: true,
+});
