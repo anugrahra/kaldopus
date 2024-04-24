@@ -162,9 +162,9 @@ function hitung2() {
 
 const popup = new Popup({
   id: "disclaimer",
-  title: "Perhatian",
+  title: "بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ",
   content:
-    "Ingat untuk selalu melihat Tabel Kalibrasi untuk menentukan nilai-nilai yang akan di-input.<br><br>Kalibrasi dilakukan minimal 1 (satu) minggu sekali.<br><br>Selalu menyala abangkuh 🔥🔥🔥",
+    "Ingat untuk selalu melihat Tabel Kalibrasi dalam menentukan nilai-nilai yang akan di-input.<br><br>Kalibrasi dilakukan minimal 1 (satu) minggu sekali.<br><br>Selalu menyala abangkuh 🔥🔥🔥<br>dan Tetap ilmu padi 🌾🌾🌾",
   sideMargin: "2.9vw",
   titleColor: "#fff",
   textColor: "#fff",
