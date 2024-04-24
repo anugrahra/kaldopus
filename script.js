@@ -3,6 +3,8 @@ function hitung() {
   // general
   let debitipa = document.getElementById("debitipa").value * 1;
   let konsentrasipac = document.getElementById("konsentrasipac").value * 1;
+
+  // pompa 1
   // sample 1
   let stroke1 = document.getElementById("stroke1").value * 1;
   let volume1 = document.getElementById("volume1").value * 1;
@@ -75,4 +77,85 @@ function hitung() {
 
   let dosisRange2 = document.getElementById("dosisRange2");
   dosisRange2.innerHTML = text2;
+}
+
+function hitung2() {
+  // get data
+  // general
+  let debitipa = document.getElementById("debitipa").value * 1;
+  let konsentrasipac = document.getElementById("konsentrasipac").value * 1;
+
+  // pompa 2
+  // sample 1
+  let stroke3 = document.getElementById("stroke3").value * 1;
+  let volume3 = document.getElementById("volume3").value * 1;
+  let waktu3 = document.getElementById("waktu3").value * 1;
+  // sample 2
+  let stroke4 = document.getElementById("stroke4").value * 1;
+  let volume4 = document.getElementById("volume4").value * 1;
+  let waktu4 = document.getElementById("waktu4").value * 1;
+
+  // dosering
+  let dosering3 = volume3 / waktu3;
+  let dosering4 = volume4 / waktu4;
+
+  // menentukan range data
+  // range from 0 to sample 1
+  let strokePompa3 = [];
+  for (s = 0; s <= stroke3; s += 1) {
+    strokePompa3.push(s);
+  }
+
+  let text3 = "";
+  for (let i = 0; i < strokePompa3.length; i++) {
+    text3 +=
+      "<tr><td>" +
+      strokePompa3[i] +
+      " %</td><td>" +
+      (0 + ((dosering3 - 0) / (stroke3 - 0)) * (strokePompa3[i] - 0)).toFixed(
+        2
+      ) +
+      " ml/s</td><td class='table-warning'>" +
+      (
+        ((0 + ((dosering3 - 0) / (stroke3 - 0)) * (strokePompa3[i] - 0)) *
+          (konsentrasipac * 10000)) /
+        (debitipa * 1000)
+      ).toFixed(2) +
+      " mg/l</td></tr>";
+  }
+
+  let dosisRange3 = document.getElementById("dosisRange3");
+  dosisRange3.innerHTML = text3;
+
+  // range from 10 to sample 20
+  let strokePompa4 = [];
+  for (a = stroke3; a <= stroke4; a += 1) {
+    strokePompa4.push(a);
+  }
+
+  let text4 = "";
+  for (let j = 1; j < strokePompa4.length; j++) {
+    text4 +=
+      "<tr><td>" +
+      strokePompa4[j] +
+      " %</td><td>" +
+      (
+        dosering3 +
+        ((dosering4 - dosering3) / (stroke4 - stroke3)) *
+          (strokePompa4[j] - stroke3)
+      ).toFixed(2) +
+      " ml/s</td><td class='table-warning'>" +
+      // (0 + ((dosering1 - 0) / (stroke1 - 0)) * (strokePompa1[i] - 0)
+      (
+        ((dosering3 +
+          ((dosering4 - dosering3) / (stroke4 - stroke3)) *
+            (strokePompa4[j] - stroke3)) *
+          (konsentrasipac * 10000)) /
+        (debitipa * 1000)
+      ).toFixed(2) +
+      " mg/l</td></tr>";
+  }
+
+  let dosisRange4 = document.getElementById("dosisRange4");
+  dosisRange4.innerHTML = text4;
 }

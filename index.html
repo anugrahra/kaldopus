@@ -16,13 +16,13 @@
   <body>
     <!-- container -->
     <div class="container">
-      <div class="row mt-3 text-center">
+      <div class="row mt-1 text-center">
         <h2 style="font-family: 'Tourney', sans-serif">
           KALIBRASI POMPA DOSING <span style="color: green">PULSAFEEDER</span>
         </h2>
       </div>
       <!-- general -->
-      <div class="row mt-3">
+      <div class="row mt-1">
         <div class="col hilang"></div>
         <div class="col card" style="width: 30%">
           <div class="card-body">
@@ -42,7 +42,7 @@
               </div>
             </div>
 
-            <div class="mb-3 text-start">
+            <div class="text-start">
               <label for="debitipa" class="form-label">Debit IPA</label>
               <div class="input-group">
                 <input
@@ -66,7 +66,7 @@
       <!-- row of samples -->
       <div class="row mt-1">
         <!-- group of pompa 1 -->
-        <div class="col-sm-6" style="border: 1px solid red">
+        <div class="col-sm-6 bg-success bg-opacity-25 rounded shadow">
           <div class="row text-center">
             <h4>Pompa 1</h4>
           </div>
@@ -163,21 +163,138 @@
           </div>
           <!-- end of pompa 1 sample 2 -->
           <!-- button of pompa 1 -->
-          <div class="row mt-2">
-            <button
-              type="submit"
-              class="btn btn-primary shadow"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              id="hitung"
-              onclick="hitung()"
-            >
-              Calculate
-            </button>
+          <div class="row mt-2 text-center">
+            <div class="col">
+              <button
+                type="submit"
+                class="btn btn-primary shadow"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                id="hitung"
+                onclick="hitung()"
+              >
+                Calculate
+              </button>
+            </div>
           </div>
           <!-- end of button pompa 1 -->
         </div>
         <!-- end of group of pompa 1 -->
+        <!-- group of pompa 2 -->
+        <div class="col-sm-6 bg-warning bg-opacity-25 rounded shadow">
+          <div class="row text-center">
+            <h4>Pompa 2</h4>
+          </div>
+          <div class="row">
+            <!-- pompa 2 sample 1 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Sample 1</h5>
+                  <div class="mb-3 text-start">
+                    <label for="stroke3" class="form-label">Stroke</label>
+                    <div class="input-group">
+                      <input
+                        type="number"
+                        class="form-control shadow"
+                        id="stroke3"
+                        value=""
+                      />
+                      <span class="input-group-text shadow">%</span>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-start">
+                    <label for="volume3" class="form-label">Volume</label>
+                    <div class="input-group">
+                      <input
+                        type="number"
+                        class="form-control shadow"
+                        id="volume3"
+                        value=""
+                      />
+                      <span class="input-group-text shadow">ml</span>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-start">
+                    <label for="waktu3" class="form-label">Waktu</label>
+                    <div class="input-group">
+                      <input
+                        type="number"
+                        class="form-control shadow"
+                        id="waktu3"
+                        value=""
+                      />
+                      <span class="input-group-text shadow">sekon</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of pompa 2 sample 1 -->
+            <!-- pompa 2 sample 2 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Sample 2</h5>
+                  <div class="mb-3 text-start">
+                    <label for="stroke4" class="form-label">Stroke</label>
+                    <div class="input-group">
+                      <input
+                        type="number"
+                        class="form-control shadow"
+                        id="stroke4"
+                        value=""
+                      />
+                      <span class="input-group-text shadow">%</span>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-start">
+                    <label for="volume4" class="form-label">Volume</label>
+                    <div class="input-group">
+                      <input
+                        type="number"
+                        class="form-control shadow"
+                        id="volume4"
+                        value=""
+                      />
+                      <span class="input-group-text shadow">ml</span>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-start">
+                    <label for="waktu2" class="form-label">Waktu</label>
+                    <div class="input-group">
+                      <input
+                        type="number"
+                        class="form-control shadow"
+                        id="waktu4"
+                        value=""
+                      />
+                      <span class="input-group-text shadow">sekon</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of pompa 2 sample 2 -->
+          <!-- button of pompa 2 -->
+          <div class="row mt-2 text-center">
+            <div class="col">
+              <button
+                type="submit"
+                class="btn btn-primary shadow"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal2"
+                id="hitung2"
+                onclick="hitung2()"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+          <!-- end of button pompa 1 -->
+        </div>
+        <!-- end of group pompa 2 -->
       </div>
       <!-- end of row of sample -->
       <!-- footer -->
@@ -199,7 +316,7 @@
       <!-- end of footer -->
       <!-- modal for pompa 1 -->
       <div
-        class="modal fade"
+        class="modal fade bg-success bg-opacity-25"
         id="exampleModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
@@ -257,6 +374,66 @@
         </div>
       </div>
       <!-- end of modal for pompa 1 -->
+      <!-- modal for pompa 2 -->
+      <div
+        class="modal fade bg-warning bg-opacity-25"
+        id="exampleModal2"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Hasil Kalibrasi POMPA 2
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row d-flex justify-content-between">
+                <table class="table table-bordered text-center table-hover col">
+                  <thead>
+                    <tr class="table-primary">
+                      <td class="fw-bold">Stroke</td>
+                      <td class="fw-bold">Dosering</td>
+                      <td class="fw-bold">Dosis</td>
+                    </tr>
+                  </thead>
+                  <tbody id="dosisRange3"></tbody>
+                </table>
+                <table
+                  class="table table-bordered table-hover text-center col ms-2 me-2"
+                >
+                  <thead>
+                    <tr class="table-primary">
+                      <td class="fw-bold">Stroke</td>
+                      <td class="fw-bold">Dosering</td>
+                      <td class="fw-bold">Dosis</td>
+                    </tr>
+                  </thead>
+                  <tbody id="dosisRange4"></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of modal for pompa 2 -->
     </div>
     <!-- end of container -->
     <!-- js -->
