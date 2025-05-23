@@ -27,6 +27,50 @@
         <div class="col hilang"></div>
         <div class="col card" style="width: 30%">
           <div class="card-body">
+            <h5 class="card-title">Konsentrasi</h5>
+            <div class="mb-3 text-start">
+              <label for="hliquidpac" class="form-label"
+                >Tinggi Liquid PAC yang masuk</label
+              >
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control shadow"
+                  id="hliquidpac"
+                  value=""
+                />
+                <span class="input-group-text shadow">cm</span>
+              </div>
+            </div>
+            <div class="mb-3 text-start">
+              <label for="beratjenis" class="form-label"
+                >Berat Jenis</label
+              >
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control shadow"
+                  id="beratjenis"
+                  value="1.248"
+                  disabled
+                />
+                <span class="input-group-text shadow">kgpl</span>
+              </div>
+            </div>
+
+
+                <button
+                  class="btn btn-primary shadow"
+                  id="hitungkonsentrasi"
+                  onclick="hitungkonsentrasi()"
+                >
+                  Calculate
+                </button>
+
+          </div>
+        </div>
+        <div class="col card" style="width: 30%">
+          <div class="card-body">
             <h5 class="card-title">General</h5>
             <div class="mb-3 text-start">
               <label for="konsentrasipac" class="form-label"
@@ -37,7 +81,7 @@
                   type="number"
                   class="form-control shadow"
                   id="konsentrasipac"
-                  value="5"
+                  value=""
                 />
                 <span class="input-group-text shadow">%</span>
               </div>
@@ -50,13 +94,10 @@
                   type="number"
                   class="form-control shadow"
                   id="debitipa"
-                  value="50"
+                  value=""
                   required
                 />
                 <span class="input-group-text shadow">lps</span>
-              </div>
-              <div class="form-text">
-                Ganti value ini, jika debit pengolahan berubah.
               </div>
             </div>
           </div>

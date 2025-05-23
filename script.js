@@ -1,3 +1,23 @@
+function hitungkonsentrasi() {
+  // get data
+  // konsentrasi
+  let hliquidpac =  document.getElementById("hliquidpac").value * 1
+  let beratjenis =  document.getElementById("beratjenis").value * 1
+  // Cek apakah input valid
+  if (isNaN(hliquidpac)) {
+    alert("Masukkan angka yang valid untuk tinggi Liquid PAC.");
+    return;
+  }
+
+  // --- MASUKKAN RUMUSMU DI SINI ---
+  // Misal kita buat contoh rumus sederhana:
+  // konsentrasi = tinggiPAC * 0.5 (ganti ini sesuai kebutuhanmu)
+  const konsentrasi = (3.14 * 89 * 89 * hliquidpac / 1000 * beratjenis / 500 * 100).toFixed(3) ;
+
+  // Masukkan hasil ke input 'konsentrasipac'
+  document.getElementById("konsentrasipac").value = konsentrasi; // hasil dibulatkan ke 2 desimal
+}
+
 function hitung() {
   // get data
   // general
