@@ -55,14 +55,10 @@ function hitung() {
         2
       ) +
       " ml/s</td><td class='table-warning'>" +
-      Math.max(
-      (  
-          (
-          ((0 + ((dosering1 - 0) / (stroke1 - 0)) * (strokePompa1[i] - 0)) *
-            (konsentrasipac * 10000)) /
-          (debitipa * 1000)
-          ) - 21.5
-        ), 0
+      (
+        (((0 + ((dosering1 - 0) / (stroke1 - 0)) * (strokePompa1[i] - 0)) *
+          (konsentrasipac * 10000)) /
+        (debitipa * 1000)) - 21.5
       ).toFixed(2) +
       " mg/l</td></tr>";
   }
@@ -90,11 +86,11 @@ function hitung() {
       " ml/s</td><td class='table-warning'>" +
       // (0 + ((dosering1 - 0) / (stroke1 - 0)) * (strokePompa1[i] - 0)
       (
-        ((dosering1 +
+        (((dosering1 +
           ((dosering2 - dosering1) / (stroke2 - stroke1)) *
             (strokePompa2[j] - stroke1)) *
           (konsentrasipac * 10000)) /
-        (debitipa * 1000)
+        (debitipa * 1000)) - 21.5
       ).toFixed(2) +
       " mg/l</td></tr>";
   }
@@ -140,14 +136,10 @@ function hitung2() {
         2
       ) +
       " ml/s</td><td class='table-warning'>" +
-        Math.max(
-        (
-          (
-          ((0 + ((dosering3 - 0) / (stroke3 - 0)) * (strokePompa3[i] - 0)) *
-            (konsentrasipac * 10000)) /
-          (debitipa * 1000)
-          ) - 21.5
-        ), 0
+      (
+        (((0 + ((dosering3 - 0) / (stroke3 - 0)) * (strokePompa3[i] - 0)) *
+          (konsentrasipac * 10000)) /
+        (debitipa * 1000)) - 21.5
       ).toFixed(2) +
       " mg/l</td></tr>";
   }
@@ -175,11 +167,11 @@ function hitung2() {
       " ml/s</td><td class='table-warning'>" +
       // (0 + ((dosering1 - 0) / (stroke1 - 0)) * (strokePompa1[i] - 0)
       (
-        ((dosering3 +
+        (((dosering3 +
           ((dosering4 - dosering3) / (stroke4 - stroke3)) *
             (strokePompa4[j] - stroke3)) *
           (konsentrasipac * 10000)) /
-        (debitipa * 1000)
+        (debitipa * 1000)) - 21.5
       ).toFixed(2) +
       " mg/l</td></tr>";
   }
